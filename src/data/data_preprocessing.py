@@ -1,6 +1,7 @@
 # src/data/data_preprocessing.py
-
+import os
 from collections import Counter
+
 from tqdm import tqdm
 
 # Define markers
@@ -23,6 +24,7 @@ def filter_and_save_dataset(input_path: str, output_path: str):
     progress_bar = tqdm()
     star_writes = Counter()
 
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(input_path, 'r', encoding='utf-8') as fi, open(output_path, 'w', encoding='utf-8') as fo:
         for i, line in enumerate(fi):
             try:

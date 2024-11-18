@@ -1,8 +1,10 @@
 # src/data/dataset.py
 
+from typing import Callable
+
 import torch
 from torch.utils.data import Dataset
-from typing import Callable
+
 
 class ReviewDataset(Dataset):
     """A PyTorch Dataset class for loading and vectorizing review data."""

@@ -1,11 +1,14 @@
 # src/train/train.py
 
+from typing import Callable, Tuple
+
 import torch
 from torch.utils.data import DataLoader
 from tqdm import tqdm
-from typing import Callable, Tuple
 
-from src.model.models import RegressionModel, MultiClassClassificationModel, BinaryClassificationModel
+from src.models.binary_classification_model import BinaryClassificationModel
+from src.models.multi_class_classification_model import MultiClassClassificationModel
+from src.models.regression_model import RegressionModel
 
 
 def train_model(
@@ -15,7 +18,7 @@ def train_model(
     adapt: Callable[[torch.Tensor, torch.Tensor], Tuple[torch.Tensor, torch.Tensor]],
     epochs: int = 5
 ):
-    """Training loop for the model."""
+    """Training loop for the models."""
     for epoch in range(epochs):
         model.train()
         progress_bar = tqdm(train_loader, desc=f"Epoch {epoch+1}/{epochs}")
@@ -31,7 +34,7 @@ def train_model(
     print("Training completed.")
 
 def evaluate_model(model: torch.nn.Module, test_loader: DataLoader, adapt: Callable[[torch.Tensor, torch.Tensor], Tuple[torch.Tensor, torch.Tensor]]) -> float:
-    """Evaluate the model and return accuracy on test data."""
+    """Evaluate the models and return accuracy on test data."""
     model.eval()
     n_correct, n_total = 0, 0
     with torch.no_grad():
@@ -45,7 +48,6 @@ def evaluate_model(model: torch.nn.Module, test_loader: DataLoader, adapt: Calla
     print(f"Test Accuracy: {accuracy:.2f}")
     return accuracy
 
-# Define utility functions for model initialization
 def initialize_model(model_type: str, n_features: int, n_hidden: int) -> torch.nn.Module:
     """Initialize a specific model type based on input model_type."""
     if model_type == "regression":
@@ -56,3 +58,4 @@ def initialize_model(model_type: str, n_features: int, n_hidden: int) -> torch.n
         return MultiClassClassificationModel(n_features, n_hidden)
     else:
         raise ValueError("Invalid model type provided.")
+

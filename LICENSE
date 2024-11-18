@@ -1,0 +1,48 @@
+LICENSE
+
+Original Work
+This project is based on material originally developed in the NLP course at Sapienza University of Rome and licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 License (https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+Original Authors:
+- Edoardo Barba
+- Michele Bevilacqua
+- Cesare Campagnano
+- Simone Conia
+- ‪Pere-Lluís Huguet Cabot‬
+- Luigi Procopio
+- Roberto Navigli
+
+(Part of the Sapienza NLP Research Group - http://nlp.uniroma1.it/)
+
+Attribution Requirements
+This repository includes work derived from the aforementioned authors. Proper credit must be given to them in any redistributed or adapted versions of this project, including the following acknowledgment:
+
+"This project is based on material from the NLP course at Sapienza University of Rome, created by Edoardo Barba, Michele Bevilacqua, Cesare Campagnano, Simone Conia, ‪Pere-Lluís Huguet Cabot‬, Luigi Procopio, and Roberto Navigli, and licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 License."
+
+The original license can be found at:
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+Modifications and Additions
+This repository has been restructured and extended by Ashkan Ansarifard. Modifications include:
+- Modularized the project into a professional repository structure.
+- Added scripts to automate data processing and training pipelines.
+- Enhanced functionality for command-line execution.
+
+Licensing for This Repository
+All material in this repository is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 License. This license applies to both the original content and any modifications made by Ashkan Ansarifard.
+
+License Summary:
+1. You are free to:
+   - Share: Copy and redistribute the material in any medium or format.
+   - Adapt: Remix, transform, and build upon the material.
+
+2. Under the following terms:
+   - Attribution: You must give appropriate credit, provide a link to the license, and indicate if changes were made.
+   - NonCommercial: You may not use the material for commercial purposes.
+   - ShareAlike: If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+
+3. For detailed terms, visit:
+   https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+Contact
+For inquiries about modifications, feel free to contact Ashkan Ansarifard.
